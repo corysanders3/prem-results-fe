@@ -1,9 +1,35 @@
 import './App.css';
+import { useEffect, useState} from 'react';
+import { Routes, Route } from 'react-router-dom'
+import { getPremData } from '../util/apiCalls';
+import { PremResults } from '../util/interface';
+import Nav from '../nav/Nav';
+import Form from '../form/Form';
+import Home from '../home/Home';
+import Standings from '../standings/Standings';
+import Gameboard from '../gameboard/Gameboard';
+import Error from '../error/Error';
 
 function App() {
+  const [results, setResults] = useState<PremResults[] | null>(null);
+  const [error, setError] = useState<string>('');
+
+  useEffect(() => {
+    getPremData('premresults')
+      .then(data => setResults(data))
+      .catch(err => setError(err))
+  }, [])
+
   return (
     <div className="App">
-      
+      <Nav />
+      <Form />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/standings/:year/:team' element={<Standings />} />
+        <Route path='/goalsgame' element={<Gameboard />} />
+        <Route path='*' element={<Error />} />
+      </Routes>
     </div>
   );
 }
