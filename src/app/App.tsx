@@ -11,7 +11,7 @@ import Gameboard from '../gameboard/Gameboard';
 import Error from '../error/Error';
 
 function App() {
-  const [results, setResults] = useState<PremResults[] | null>(null);
+  const [results, setResults] = useState<PremResults[] | []>([]);
   const [error, setError] = useState<string>('');
 
   useEffect(() => {
@@ -23,10 +23,10 @@ function App() {
   return (
     <div className="App">
       <Nav />
-      <Form />
+      <Form results={results}/>
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/standings/:year/:team' element={<Standings />} />
+        <Route path='/standings/:club/:year' element={<Standings results={results} />} />
         <Route path='/goalsgame' element={<Gameboard />} />
         <Route path='*' element={<Error />} />
       </Routes>

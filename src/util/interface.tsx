@@ -10,7 +10,24 @@ interface PremResults {
     goalsAgainst: number,
     goalDifference: number,
     points: number,
-    notes: string 
-}
+    notes: string
+};
 
-export type { PremResults };
+interface StandingsProps {
+    results: PremResults[]
+};
+
+interface Property {
+    seasonEndYear: number,
+    team: string
+};
+
+interface SelectOptions {
+    field: string | number
+};
+
+interface TableLayout {
+    data: PremResults
+};
+
+export type { PremResults, StandingsProps, Property, SelectOptions, TableLayout };

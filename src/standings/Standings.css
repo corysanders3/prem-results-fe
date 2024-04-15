@@ -1,0 +1,12 @@
+.league-table > :nth-child(2n+3) {
+    background-color: #eee;
+}
+
+.table-row {
+    display: grid;
+    grid-template-columns: 5% 15% 5% 5% 5% 5% 5% 5% 5% 10% 25%;
+    grid-template-rows: 70px;
+    border: 1px solid black;
+    padding-left: 10px;
+    column-gap: 1%;
+}
