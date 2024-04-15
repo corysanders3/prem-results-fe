@@ -1,12 +1,13 @@
 import './Table.css';
 import { StandingsProps, PremResults, TableLayout } from '../util/interface';
 
-function Table({ data }: TableLayout) {
+function Table({ data, year }: TableLayout) {
+
 
     return (
         <section className='table-row'>
             <p className='rank'>{data.rank}</p>
-            <p><b>{data.team}</b></p>
+            <p><b>{data.team} { year && `(${data.seasonEndYear})**`}</b></p>
             <p>{data.matchesPlayed}</p>
             <p>{data.wins}</p>
             <p>{data.draws}</p>

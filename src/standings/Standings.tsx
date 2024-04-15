@@ -1,6 +1,5 @@
 import './Standings.css';
-import { useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { StandingsProps, PremResults } from '../util/interface';
 import Table from '../table/Table';
 
@@ -22,7 +21,7 @@ function Standings({ results }: StandingsProps) {
             }).sort((a, b) => {
                 return b.seasonEndYear - a.seasonEndYear
             })
-            return showResults(filteredResults)
+            return showResults(filteredResults, year)
         } else {
             const filteredResults = results.filter((r) => {
                 return r.team === club
@@ -33,11 +32,12 @@ function Standings({ results }: StandingsProps) {
         }
     }
 
-    function showResults(results: PremResults[]) {
+    function showResults(results: PremResults[], year?: string | undefined) {
         return results.map((data) => {
             return (
                 <Table 
-                    key={data.rank + data.seasonEndYear}
+                    key={data.seasonEndYear + data.team}
+                    year={year}
                     data={data}
                 />
             )
@@ -45,11 +45,6 @@ function Standings({ results }: StandingsProps) {
     }
 
     const newTable = filterResults()
-    console.log(newTable)
-
-    // useEffect(() => {
-    //     filterResults()
-    // }, [club, year])
 
     return (
         <> 
@@ -73,7 +68,13 @@ function Standings({ results }: StandingsProps) {
                         {newTable}
                     </main>
                 </>
-            ) : <h3>Nope</h3>}
+            ) : 
+                <>
+                    <h3>Sorry, that club did not play in the Premier League that year.</h3>
+                    <h4>Try searching again, or head back home with the link below.</h4>
+                    <Link to='/'>Back To Home</Link>
+                </>
+            }
         </>
     )
 }

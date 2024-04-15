@@ -27,7 +27,8 @@ interface SelectOptions {
 };
 
 interface TableLayout {
-    data: PremResults
+    data: PremResults,
+    year?: string
 };
 
 export type { PremResults, StandingsProps, Property, SelectOptions, TableLayout };

@@ -1,5 +1,11 @@
 .league-table > :nth-child(2n+3) {
     background-color: #eee;
+    
+}
+
+.league-table {
+    margin-left: 100px;
+    margin-right: 100px;
 }
 
 .table-row {
