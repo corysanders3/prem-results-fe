@@ -1,4 +1,6 @@
 import './Home.css';
+import { bestMoments } from '../util/bestMomentsData';
+import { useState } from 'react';
 
 function Home() {
 

@@ -50,7 +50,7 @@ function Standings({ results }: StandingsProps) {
         <> 
             { newTable.length ? (
                 <>
-                    <h3>{ year === 'all' ? 'All Finishes' : `${year} Season End Year`}</h3>
+                    <h3 className='year'>{ year === 'all' ? 'All Finishes' : `${year} Season End Year`}</h3>
                     <main className='league-table'>
                         <section className='table-row'>
                             <p>Rank</p>
