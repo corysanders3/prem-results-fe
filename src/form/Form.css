@@ -1,0 +1,28 @@
+.search-section {
+    margin-left: 100px;
+}
+
+.form-container {
+    margin-left: 100px;
+}
+
+.dropdown {
+    font-size: large;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.form-btn {
+    font-size: large;
+    padding: 0px 20px 0px 20px;
+    font-weight: 600;
+    border-radius: 10px;
+    background-color: white;
+    color: #2D0A3D;
+    border: 3px solid #2D0A3D;
+}
+
+.form-btn:hover {
+    cursor: pointer;
+    background-color: lightgray;
+}

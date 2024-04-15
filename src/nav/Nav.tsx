@@ -7,9 +7,9 @@ function Nav() {
     return (
         <header className='nav'>
             <img className='prem-logo' src={premLogo} alt='Premier League Logo'/>
-            <div className ='nav-links'>
-                <NavLink to='/'>Home</NavLink>
-                <NavLink to='/goalsgame'>Goals Game</NavLink>
+            <div className ='nav-links-container'>
+                <NavLink to='/' className='nav-link'>Home</NavLink>
+                <NavLink to='/goalsgame' className='nav-link'>Goals Game</NavLink>
             </div>
         </header>
     )

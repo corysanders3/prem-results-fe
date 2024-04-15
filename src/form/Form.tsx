@@ -58,22 +58,23 @@ function Form({ results }: StandingsProps) {
     }
 
     return (
-        <>
-            <form>
-                <select ref={clubDropdown} onChange={e => setClubInput(e.target.value)}>
+        <section className='search-section'>
+            <h2 className='search-header'>See past season standings by season end year, team, or both:</h2>
+            <form className='form-container'>
+                <select className='dropdown' ref={clubDropdown} onChange={e => setClubInput(e.target.value)}>
                     <option value={''}>Choose a club</option>
                     {allClubs}
                 </select>
-                <select ref={yearDropdown} onChange={e => setYearInput(e.target.value)}>
+                <select className='dropdown' ref={yearDropdown} onChange={e => setYearInput(e.target.value)}>
                     <option value=''>Choose a year</option>
                     {allYears}
                 </select>
                 <Link to={`/standings/${clubInput ? clubInput : 'all'}/${yearInput ? yearInput : 'all'}`}>
-                    <button onClick={e => checkInputs(e)}>Go!</button>
+                    <button className='form-btn' onClick={e => checkInputs(e)}>Go!</button>
                 </Link>
             </form>
             { error && <h3>{error}</h3>}
-        </>
+        </section>
     )
 }
 
