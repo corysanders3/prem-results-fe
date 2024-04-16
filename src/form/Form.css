@@ -1,10 +1,12 @@
 .search-section {
     margin-left: 100px;
     margin-right: 100px;
+    display: flex;
+    align-items: center;
 }
 
 .form-container {
-    margin-left: 100px;
+    margin-left: 20px;
 }
 
 .dropdown {

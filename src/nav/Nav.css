@@ -9,10 +9,6 @@
     background-color: #2D0A3D;
 }
 
-.nav-links-container {
-    margin-right: 40px;
-}
-
 .nav-link {
     font-size: larger;
     color: #2D0A3D;
@@ -22,9 +18,6 @@
     border-radius: 10px;
     background-color: white;
     font-weight: 500;
-}
-
-.nav-links-container > :nth-child(1) {
     margin-right: 40px;
 }
 

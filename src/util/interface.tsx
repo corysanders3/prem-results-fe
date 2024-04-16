@@ -31,4 +31,14 @@ interface TableLayout {
     year?: string
 };
 
-export type { PremResults, StandingsProps, Property, SelectOptions, TableLayout };
+interface topMoments {
+    name: string,
+    year: number,
+    story: string,
+    link: string,
+    image: string
+}
+
+export type { PremResults, StandingsProps, Property, SelectOptions, 
+    TableLayout, topMoments 
+};

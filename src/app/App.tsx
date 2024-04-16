@@ -9,6 +9,7 @@ import Home from '../home/Home';
 import Standings from '../standings/Standings';
 import Gameboard from '../gameboard/Gameboard';
 import Error from '../error/Error';
+import About from '../about/About';
 
 function App() {
   const [results, setResults] = useState<PremResults[] | []>([]);
@@ -26,6 +27,7 @@ function App() {
       <Form results={results}/>
       <Routes>
         <Route path='/' element={<Home />} />
+        <Route path='/about' element={<About />} />
         <Route path='/standings/:club/:year' element={<Standings results={results} />} />
         <Route path='/goalsgame' element={<Gameboard />} />
         <Route path='*' element={<Error />} />

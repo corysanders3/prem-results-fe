@@ -1,12 +1,16 @@
 import './Home.css';
-import { bestMoments } from '../util/bestMomentsData';
+import Moments from '../moments/Moments';
 import { useState } from 'react';
 
 function Home() {
 
     return (
         <>
-            <p>hello</p>
+            <section className='main-content'>
+                <h1 className='title'>Premier Tally</h1>
+                <h2 className='main-h2'>Tracking England Football Triumphs</h2>
+            </section>
+            <Moments />
         </>
     )
 }
