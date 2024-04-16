@@ -10,7 +10,7 @@ function Nav() {
             <div className ='nav-links-container'>
                 <NavLink to='/' className='nav-link'>Home</NavLink>
                 <NavLink to='/about' className='nav-link'>About</NavLink>
-                <NavLink to='/goalsgame' className='nav-link'>Goals Game</NavLink>
+                <NavLink to='/goalsgame' className='nav-link'>Game</NavLink>
             </div>
         </header>
     )

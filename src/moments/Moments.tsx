@@ -1,10 +1,11 @@
 import './Moments.css';
 import { bestMoments } from '../util/bestMomentsData';
 import { useState,useEffect } from 'react';
-import { topMoments } from '../util/interface';
+import { Link } from 'react-router-dom';
+import { TopMoments } from '../util/interface';
 
 function Moments() {
-    const [moment, setMoment] = useState<topMoments | null>(null);
+    const [moment, setMoment] = useState<TopMoments | null>(null);
 
     function findStory() {
         const index = Math.floor(Math.random() * bestMoments.length);
@@ -21,7 +22,7 @@ function Moments() {
         { moment && 
         <main className='story-main'>
             <h3 className='story-text'>Premier League Top Moments...</h3>
-            <h3 className='story-text'>{moment.name}</h3>
+            <h3 className='story-text story-name'>{moment.name}</h3>
             <div className='img-container'>
                 <img src={moment.image} alt='Image of classic English football story' className='story-img' />
             </div>
@@ -29,6 +30,7 @@ function Moments() {
             <a href={moment.link} target='_blank' className='video-a'>
                 <button className='video-btn'>Video</button>
             </a>
+            <h4 className='game-blurb'>Like playing games?? Love the Premier League?? Test your knowledge by playing our Premier League <Link to='/goalsgame' className='game-footer'>Goals Game</Link> here, or the Game link at the top of the page.</h4>
         </main>
         }
         </>

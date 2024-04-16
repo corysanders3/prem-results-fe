@@ -31,7 +31,7 @@ interface TableLayout {
     year?: string
 };
 
-interface topMoments {
+interface TopMoments {
     name: string,
     year: number,
     story: string,
@@ -39,6 +39,23 @@ interface topMoments {
     image: string
 }
 
+interface GoalsLayout {
+    name: string,
+    club: string,
+    place: number,
+    goals: number,
+    image: string
+}
+
+interface GoalsGameLayout {
+    seasonEndYear: string,
+    goals: GoalsLayout[]
+}
+
+interface PlayersProps {
+    goals: GoalsGameLayout[]
+}
+
 export type { PremResults, StandingsProps, Property, SelectOptions, 
-    TableLayout, topMoments 
+    TableLayout, TopMoments, GoalsGameLayout, PlayersProps
 };
