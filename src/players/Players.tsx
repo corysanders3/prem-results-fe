@@ -4,18 +4,21 @@ import { useState, useEffect } from 'react';
 import { GoalsLayout } from '../util/interface';
 
 function Players({ goals }: PlayersProps) {
+    let record = 0;
     const [playerOne, setPlayerOne] = useState<GoalsLayout | null>(null);
     const [playerTwo, setPlayerTwo] = useState<GoalsLayout | null>(null);
     const [isButtonDisabled, setIsButtonDisabled] = useState<boolean>(false);
     const [result, setResult] = useState<boolean>(false);
     const [message, setMessage] = useState<string>('');
-    const [correct, setCorrect] = useState<number>(0);
+    const [correct, setCorrect] = useState<number>(record);
 
     function getRandomPlayer() {
         const indexGoalsOne = Math.floor(Math.random() * goals.length);
         const indexGoalsTwo = Math.floor(Math.random() * goals.length);
         const indexPlaceOne = Math.floor(Math.random() * 3);
         const indexPlaceTwo = Math.floor(Math.random() * 3);
+
+
         const playerOne = goals[indexGoalsOne].goals[indexPlaceOne]
         const playerTwo = goals[indexGoalsTwo].goals[indexPlaceTwo]
 
@@ -27,23 +30,35 @@ function Players({ goals }: PlayersProps) {
     }
 
     useEffect(() => {
-        getRandomPlayer()
-    }, [])
+        if(sessionStorage.getItem('one') && sessionStorage.getItem('two')) {
+            const playerOne = sessionStorage.getItem('one') || '{}'
+            setPlayerOne(JSON.parse(playerOne))
+            const playerTwo = sessionStorage.getItem('two') || '{}'
+            setPlayerTwo(JSON.parse(playerTwo))
+        } else if(goals.length > 0){
+            getRandomPlayer()
+        }
+        const updatedRecord = sessionStorage.getItem('record') || '{}'
+        setCorrect(Number(updatedRecord) || 0)
+    }, [goals])
 
     function checkGame(e: React.MouseEvent<HTMLButtonElement>) {
         e.preventDefault();
         setIsButtonDisabled(true);
+        sessionStorage.removeItem('correct');
         const id = e.currentTarget.id
 
         if(id === 'one' && playerOne && playerTwo) {
             if(playerOne.goals > playerTwo.goals) {
                 setMessage('Master Class, You Won This Round! See How May You Can Get In A Row!')
                 setResult(true);
-                setCorrect(correct + 1);
+                record = correct + 1;
+                setCorrect(record);
             } else if(playerOne.goals < playerTwo.goals) {
-                setMessage('A Bit Of A Shocker, You Lost This Round! Play Again To Build Up Your Steak.')
+                setMessage('A Bit Of A Shocker, You Lost This Round! Play Again To Build Up Your Streak.')
                 setResult(true);
-                setCorrect(0);
+                record = 0;
+                setCorrect(record);
             } else {
                 setMessage('It\'s A Draw! Your Streak Stays Alive. Move To The Next Round To Keep It Going.')
                 setResult(true);
@@ -52,16 +67,21 @@ function Players({ goals }: PlayersProps) {
             if(playerTwo.goals > playerOne.goals) {
                 setMessage('Master Class, You Won This Round! See How May You Can Get In A Row!')
                 setResult(true);
-                setCorrect(correct + 1);
+                record = correct + 1;
+                setCorrect(record);
             } else if(playerTwo.goals < playerOne.goals) {
-                setMessage('A Bit Of A Shocker, You Lost This Round! Play Again To Build Up Your Steak.')
+                setMessage('A Bit Of A Shocker, You Lost This Round! Play Again To Build Up Your Streak.')
                 setResult(true);
-                setCorrect(0);
+                record = 0;
+                setCorrect(record);
             } else {
                 setMessage('It\'s A Draw! Your Streak Stays Alive. Move To The Next Round To Keep It Going.')
                 setResult(true);
             }
         }
+        sessionStorage.setItem('record', JSON.stringify(record))
+        sessionStorage.removeItem('one');
+        sessionStorage.removeItem('two');
     }
 
     function gameRefresh(e: React.MouseEvent<HTMLButtonElement>) {

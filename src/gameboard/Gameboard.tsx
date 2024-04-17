@@ -10,6 +10,9 @@ function Gameboard() {
     const [active, setActive] = useState<boolean>(false);
 
     useEffect(() => {
+        if(sessionStorage.getItem('active')) {
+            setActive(true);
+        } 
         getPremData('premstats')
             .then(data => setGoals(data))
             .catch(err => setError(err))
@@ -18,6 +21,7 @@ function Gameboard() {
     function changeActive(e: React.MouseEvent<HTMLButtonElement>) {
         e.preventDefault()
         setActive(true);
+        sessionStorage.setItem('active', JSON.stringify(active))
     }
 
     return (
