@@ -44,7 +44,8 @@ interface GoalsLayout {
     club: string,
     place: number,
     goals: number,
-    image: string
+    image: string,
+    seasonEndYear: number
 }
 
 interface GoalsGameLayout {
@@ -57,5 +58,5 @@ interface PlayersProps {
 }
 
 export type { PremResults, StandingsProps, Property, SelectOptions, 
-    TableLayout, TopMoments, GoalsGameLayout, PlayersProps
+    TableLayout, TopMoments, GoalsGameLayout, PlayersProps, GoalsLayout
 };

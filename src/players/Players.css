@@ -1,0 +1,40 @@
+.players-section {
+    margin-left: 100px;
+    margin-right: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+}
+
+.player-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid black;
+    padding-bottom: 20px;
+}
+
+.end-year {
+    margin-top: 0px;
+    margin-bottom: 30px;
+}
+
+.player-pic {
+    width: 400px;
+    height: 300px;
+}
+
+.game-btn {
+    font-size: large;
+    padding: 0px 20px 0px 20px;
+    font-weight: 600;
+    border-radius: 10px;
+    background-color: white;
+    color: #2D0A3D;
+    border: 3px solid #2D0A3D;
+}
+
+.game-btn:hover {
+    cursor: pointer;
+    background-color: lightgray;
+}
