@@ -42,3 +42,15 @@
         margin-right: 5px;
     }
 }
+
+@media screen and (max-width: 460px) {
+    .nav-links-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .nav-link:nth-child(1) {
+        margin-bottom: 10px;
+        grid-column: span 2;
+        text-align: center;
+    }
+}

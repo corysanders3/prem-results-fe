@@ -55,15 +55,15 @@ function Standings({ results }: StandingsProps) {
                         <section className='table-row'>
                             <p>Rank</p>
                             <p><b>Club</b></p>
-                            <p>MP*</p>
+                            <p className='clear'>MP*</p>
                             <p>W*</p>
                             <p>D*</p>
                             <p>L*</p>
-                            <p>GF*</p>
-                            <p>GA*</p>
+                            <p className='clear'>GF*</p>
+                            <p className='clear'>GA*</p>
                             <p>GD*</p>
                             <p><b>Points</b></p>
-                            <p>Notes</p>
+                            <p className='notes'>Notes</p>
                         </section>
                         {newTable}
                     </main>

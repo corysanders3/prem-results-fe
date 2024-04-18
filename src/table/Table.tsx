@@ -8,12 +8,12 @@ function Table({ data, year }: TableLayout) {
         <section className='table-row'>
             <p className='rank'>{data.rank}</p>
             <p><b>{data.team} { year && `(${data.seasonEndYear})**`}</b></p>
-            <p>{data.matchesPlayed}</p>
+            <p className='clear'>{data.matchesPlayed}</p>
             <p>{data.wins}</p>
             <p>{data.draws}</p>
             <p>{data.losses}</p>
-            <p>{data.goalsFor}</p>
-            <p>{data.goalsAgainst}</p>
+            <p className='clear'>{data.goalsFor}</p>
+            <p className='clear'>{data.goalsAgainst}</p>
             <p>{data.goalDifference}</p>
             <p><b>{data.points}</b></p>
             <p className='notes'>{data.notes}</p>
