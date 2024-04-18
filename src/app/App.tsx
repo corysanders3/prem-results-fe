@@ -22,7 +22,7 @@ function App() {
   }, [])
 
   return (
-    <div className="App">
+    <div className="app">
       <Nav />
       <Form results={results}/>
       <Routes>
@@ -32,6 +32,7 @@ function App() {
         <Route path='/goalsgame' element={<Gameboard />} />
         <Route path='*' element={<Error />} />
       </Routes>
+      <footer className='bottom'></footer>
     </div>
   );
 }
