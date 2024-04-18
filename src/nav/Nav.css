@@ -30,3 +30,15 @@
 .active {
     background-color: lightgray;
 }
+
+@media screen and (max-width: 540px) {
+    .nav-link {
+        margin-right: 20px;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    .nav-link {
+        margin-right: 5px;
+    }
+}
