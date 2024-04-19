@@ -1,0 +1,12 @@
+.error-section {
+    margin-left: 100px;
+    margin-right: 100px;
+    font-size: large;
+}
+
+@media screen and (max-width: 680px) {
+    .error-section {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+}

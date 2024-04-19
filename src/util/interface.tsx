@@ -37,7 +37,7 @@ interface TopMoments {
     story: string,
     link: string,
     image: string
-}
+};
 
 interface GoalsLayout {
     name: string,
@@ -46,16 +46,16 @@ interface GoalsLayout {
     goals: number,
     image: string,
     seasonEndYear: number
-}
+};
 
 interface GoalsGameLayout {
     seasonEndYear: string,
     goals: GoalsLayout[]
-}
+};
 
 interface PlayersProps {
     goals: GoalsGameLayout[]
-}
+};
 
 export type { PremResults, StandingsProps, Property, SelectOptions, 
     TableLayout, TopMoments, GoalsGameLayout, PlayersProps, GoalsLayout

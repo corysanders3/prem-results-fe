@@ -1,5 +1,5 @@
 import './Table.css';
-import { StandingsProps, PremResults, TableLayout } from '../util/interface';
+import { TableLayout } from '../util/interface';
 
 function Table({ data, year }: TableLayout) {
 

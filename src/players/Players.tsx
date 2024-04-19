@@ -1,7 +1,6 @@
 import './Players.css';
-import { GoalsGameLayout, PlayersProps } from '../util/interface';
+import { GoalsLayout, PlayersProps } from '../util/interface';
 import { useState, useEffect } from 'react';
-import { GoalsLayout } from '../util/interface';
 
 function Players({ goals }: PlayersProps) {
     let record = 0;

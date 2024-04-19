@@ -10,3 +10,15 @@
   flex-direction: column;
   min-height: 100vh;
 }
+
+.api-error {
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+@media screen and (max-width: 680px) {
+  .api-error {
+      margin-left: 50px;
+      margin-right: 50px;
+  }
+}

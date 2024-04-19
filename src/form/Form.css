@@ -6,12 +6,20 @@
 
 .form-container {
     margin-left: 10px;
+    margin-top: 5px;
 }
 
 .dropdown {
     font-size: large;
     border-radius: 10px;
     margin-right: 20px;
+}
+
+.error-form {
+    margin: 0px 100px 0px 100px;
+    text-align: center;
+    font-size: larger;
+    color: red;
 }
 
 .form-btn {
@@ -29,7 +37,12 @@
     background-color: lightgray;
 }
 
-@media screen and (max-width: 1118px) {
+.label {
+    margin-right: 5px;
+    font-size: large;
+}
+
+@media screen and (max-width: 1210px) {
     .search-section {
         margin-left: 100px;
         margin-right: 100px;
@@ -38,8 +51,29 @@
 }
 
 @media screen and (max-width: 767px) {
-    .search-section {
+    .search-section, .error-form {
         margin-left: 50px;
         margin-right: 50px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .search-section, .error-form {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    .form-container {
+        display: grid;
+        grid-template-columns: 35px 165px;
+        grid-gap: 10px;
+    }
+
+    .search-section {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
     }
 }

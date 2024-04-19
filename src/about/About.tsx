@@ -15,7 +15,7 @@ function About() {
                 <div className='pyramid-container'>
                     <img className='pyramid-img' src={pyramid} alt='Pyramid showing the tiers of English Football' />
                 </div>
-                <h4 className='game-blurb'>Like playing games?? Love the Premier League?? Test your knowledge by playing our Premier League <Link to='/goalsgame' className='game-footer'>Goals Game</Link> here, or the Game link at the top of the page.</h4>
+                <p className='game-blurb'><b>Like playing games?? Love the Premier League?? Test your knowledge by playing our Premier League <Link to='/goalsgame' className='game-footer'>Goals Game</Link> here, or the Game link at the top of the page.</b></p>
             </main>
         </>
     )

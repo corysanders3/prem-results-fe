@@ -50,7 +50,7 @@ function Standings({ results }: StandingsProps) {
         <> 
             { newTable.length ? (
                 <>
-                    <h3 className='year'>{ year === 'all' ? 'All Finishes' : `${year} Season End Year`}</h3>
+                    <h1 className='year'>{ year === 'all' ? 'All Finishes' : `${year} Season End Year`}</h1>
                     <main className='league-table'>
                         <section className='table-row'>
                             <p>Rank</p>
@@ -68,7 +68,6 @@ function Standings({ results }: StandingsProps) {
                         {newTable}
                     </main>
                     <section className='key'>
-                        <p><b><u>Key</u></b></p>
                         <p><b>MP* : </b>Matches Played</p>
                         <p><b>W* : </b>Wins</p>
                         <p><b>D* : </b>Draws (ties)</p>
@@ -77,7 +76,7 @@ function Standings({ results }: StandingsProps) {
                         <p><b>GA* : </b>Goals Against</p>
                         <p><b>GD* : </b>Goal Difference</p>
                         <p className='year-key'><b>** : </b>Year (only applicable when searching for club only)</p>
-                        <h4 className='game-blurb'>Like playing games?? Love the Premier League?? Test your knowledge by playing our Premier League <Link to='/goalsgame' className='game-footer'>Goals Game</Link> here, or the Game link at the top of the page.</h4>
+                        <p className='game-blurb'><b>Like playing games?? Love the Premier League?? Test your knowledge by playing our Premier League <Link to='/goalsgame' className='game-footer'>Goals Game</Link> here, or the Game link at the top of the page.</b></p>
                     </section>
                 </>
             ) : 

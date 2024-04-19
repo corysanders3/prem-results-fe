@@ -8,6 +8,14 @@
     margin-right: 100px;
 }
 
+.year {
+    font-size: 25px;
+}
+
+.rules {
+    line-height: 1.5;
+}
+
 .table-row {
     display: grid;
     grid-template-columns: 5% 15% 5% 5% 5% 5% 5% 5% 5% 10% 25%;
@@ -69,6 +77,11 @@
     .table-row {
         grid-template-columns: 10% 21% 7% 7% 7% 7% 7% 7% 7% 15%;
 
+    }
+
+    .not-found {
+        margin-left: 50px;
+        margin-right: 50px;
     }
 }
 

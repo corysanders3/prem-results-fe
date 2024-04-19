@@ -62,11 +62,13 @@ function Form({ results }: StandingsProps) {
             <section className='search-section'>
                 <h2 className='search-header'>See past season standings by season end year, team, or both:</h2>
                 <form className='form-container'>
-                    <select className='dropdown' ref={clubDropdown} onChange={e => setClubInput(e.target.value)}>
+                    <label htmlFor='club' className='label'><b>Club</b></label>
+                    <select name='club' id='club' className='dropdown' ref={clubDropdown} onChange={e => setClubInput(e.target.value)}>
                         <option value={''}>Choose a club</option>
                         {allClubs}
                     </select>
-                    <select className='dropdown' ref={yearDropdown} onChange={e => setYearInput(e.target.value)}>
+                    <label htmlFor='year' className='label'><b>Year</b></label>
+                    <select name='year' id='year' className='dropdown' ref={yearDropdown} onChange={e => setYearInput(e.target.value)}>
                         <option value=''>Choose a year</option>
                         {allYears}
                     </select>
@@ -75,7 +77,7 @@ function Form({ results }: StandingsProps) {
                     </Link>
                 </form>
             </section>
-            { error && <h3>{error}</h3>}
+            { error && <h3 className='error-form'>{error}</h3>}
         </>
     )
 }

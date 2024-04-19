@@ -1,6 +1,5 @@
 import './Home.css';
 import Moments from '../moments/Moments';
-import { useState } from 'react';
 
 function Home() {
 

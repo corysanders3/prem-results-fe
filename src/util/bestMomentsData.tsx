@@ -1,5 +1,3 @@
-
-
 const bestMoments = [
     {
         name: 'Leicester City Win the League at 5,000-1 Odds!',

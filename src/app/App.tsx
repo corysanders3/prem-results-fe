@@ -1,6 +1,6 @@
 import './App.css';
 import { useEffect, useState} from 'react';
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, Link } from 'react-router-dom'
 import { getPremData } from '../util/apiCalls';
 import { PremResults } from '../util/interface';
 import Nav from '../nav/Nav';
@@ -16,9 +16,10 @@ function App() {
   const [error, setError] = useState<string>('');
 
   useEffect(() => {
+    setError('');
     getPremData('premresults')
       .then(data => setResults(data))
-      .catch(err => setError(err))
+      .catch(err => setError(err.message))
   }, [])
 
   return (
@@ -28,7 +29,15 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
-        <Route path='/standings/:club/:year' element={<Standings results={results} />} />
+        <Route path='/standings/:club/:year' element={ !error ? <Standings results={results} />
+          :
+            <section className='api-error'>
+                <h3>We are encountering issues.</h3>
+                <h4>{error}</h4>
+                <Link to='/' className='back-home-btn'>Back To Home</Link>
+            </section>
+        }
+        />
         <Route path='/goalsgame' element={<Gameboard />} />
         <Route path='*' element={<Error />} />
       </Routes>
