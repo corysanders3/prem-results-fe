@@ -56,12 +56,12 @@ function Standings({ results }: StandingsProps) {
                             <p>Rank</p>
                             <p><b>Club</b></p>
                             <p className='clear'>MP*</p>
-                            <p>W*</p>
-                            <p>D*</p>
-                            <p>L*</p>
+                            <p className='clear-two'>W*</p>
+                            <p className='clear-two'>D*</p>
+                            <p className='clear-two'>L*</p>
                             <p className='clear'>GF*</p>
                             <p className='clear'>GA*</p>
-                            <p>GD*</p>
+                            <p className='clear-two'>GD*</p>
                             <p><b>Points</b></p>
                             <p className='notes'>Notes</p>
                         </section>

@@ -72,13 +72,24 @@
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 540px) {
     .notes, .clear {
         display: none;
     }
 
     .table-row {
         grid-template-columns: 14% 25% 9% 9% 9% 9% 20%;
+
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .notes, .clear, .clear-two {
+        display: none;
+    }
+
+    .table-row {
+        grid-template-columns: 20% 50% 30%;
 
     }
 }

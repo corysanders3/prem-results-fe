@@ -7,3 +7,37 @@
     width: 500px;
     margin-bottom: 40px;
 }
+
+.main-about {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.pyramid-container {
+    text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+    .main-about {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .main-about {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    .pyramid-img {
+        width: 400px;
+        margin-bottom: 30px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .pyramid-img {
+        width: 300px;
+        margin-bottom: 20px;
+    }
+}

@@ -9,12 +9,12 @@ function Table({ data, year }: TableLayout) {
             <p className='rank'>{data.rank}</p>
             <p><b>{data.team} { year && `(${data.seasonEndYear})**`}</b></p>
             <p className='clear'>{data.matchesPlayed}</p>
-            <p>{data.wins}</p>
-            <p>{data.draws}</p>
-            <p>{data.losses}</p>
+            <p className='clear-two'>{data.wins}</p>
+            <p className='clear-two'>{data.draws}</p>
+            <p className='clear-two'>{data.losses}</p>
             <p className='clear'>{data.goalsFor}</p>
             <p className='clear'>{data.goalsAgainst}</p>
-            <p>{data.goalDifference}</p>
+            <p className='clear-two'>{data.goalDifference}</p>
             <p><b>{data.points}</b></p>
             <p className='notes'>{data.notes}</p>
         </section>

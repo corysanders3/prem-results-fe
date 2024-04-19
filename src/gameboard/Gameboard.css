@@ -25,3 +25,24 @@
     cursor: pointer;
     background-color: lightgray;
 }
+
+@media screen and (max-width: 767px) {
+    .main-game {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+}
+
+@media screen and (max-width: 555px) {
+    .ready {
+        display: block;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .main-game {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
