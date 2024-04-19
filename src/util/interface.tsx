@@ -54,7 +54,8 @@ interface GoalsGameLayout {
 };
 
 interface PlayersProps {
-    goals: GoalsGameLayout[]
+    goals: GoalsGameLayout[],
+    error?: string
 };
 
 export type { PremResults, StandingsProps, Property, SelectOptions, 

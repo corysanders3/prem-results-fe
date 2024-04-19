@@ -1,8 +1,9 @@
 import './Players.css';
 import { GoalsLayout, PlayersProps } from '../util/interface';
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
-function Players({ goals }: PlayersProps) {
+function Players({ goals, error }: PlayersProps) {
     let record = 0;
     const [playerOne, setPlayerOne] = useState<GoalsLayout | null>(null);
     const [playerTwo, setPlayerTwo] = useState<GoalsLayout | null>(null);
@@ -92,6 +93,13 @@ function Players({ goals }: PlayersProps) {
 
     return (
         <>
+            { error &&
+                <section className='api-error player-error'>
+                    <h3>We are encountering issues.</h3>
+                    <h4>{error}</h4>
+                    <Link to='/' className='back-home-btn'>Back To Home</Link>
+                </section>
+            }
             { playerOne && playerTwo && (
             <>
             <h3 className='correct'>Number Correct In A Row: {correct}</h3>

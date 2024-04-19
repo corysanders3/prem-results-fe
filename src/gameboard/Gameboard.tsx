@@ -40,14 +40,7 @@ function Gameboard() {
                 </ol>
                 { !active && <h3 className='ready'>Click <button className='ready-btn' onClick={e => changeActive(e)}>Here</button> When You're Ready!</h3> }
             </main>
-            { active && <Players goals={goals} /> }
-            { error &&
-                <section className='api-error'>
-                    <h3>We are encountering issues.</h3>
-                    <h4>{error}</h4>
-                    <Link to='/' className='back-home-btn'>Back To Home</Link>
-                </section>
-            } 
+            { active && <Players goals={goals} error={error}/> }
         </>
     )
 }
