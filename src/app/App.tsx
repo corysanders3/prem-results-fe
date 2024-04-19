@@ -26,18 +26,11 @@ function App() {
     <div className="app">
       <Nav />
       <Form results={results}/>
+      { error && <p className='api-error'>{error}</p>}
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
-        <Route path='/standings/:club/:year' element={ !error ? <Standings results={results} />
-          :
-            <section className='api-error'>
-                <h3>We are encountering issues.</h3>
-                <h4>{error}</h4>
-                <Link to='/' className='back-home-btn'>Back To Home</Link>
-            </section>
-        }
-        />
+        <Route path='/standings/:club/:year' element={<Standings results={results} />} />
         <Route path='/goalsgame' element={<Gameboard />} />
         <Route path='*' element={<Error />} />
       </Routes>

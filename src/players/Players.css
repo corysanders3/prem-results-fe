@@ -46,7 +46,7 @@
 
 .game-result {
     position: absolute;
-    top: 80%;
+    top: 650px;
     left: 28%;
     border: 5px solid black;
     border-radius: 5px;
@@ -68,6 +68,10 @@
     margin-top: 10px;
 }
 
+.player-error {
+    margin-bottom: 50px;
+}
+
 @media screen and (max-width: 900px) {
     .player-pic {
         width: 300px;
@@ -75,7 +79,7 @@
     }
 
     .game-result {
-        top: 90%;
+        top: 650px;
     }
 }
 
@@ -97,7 +101,7 @@
     .game-result {
         width: 50%;
         left: 21%;
-        top: 100%;
+        top: 750px;
     }
 }
 
@@ -114,7 +118,7 @@
     .game-result {
         width: 60%;
         left: 17%;
-        top: 110%;
+        top: 820px;
     }
 }
 
@@ -137,7 +141,7 @@
     .game-result {
         width: 60%;
         left: 13%;
-        top: 150%;
+        top: 1200px;
     }
 }
 
@@ -158,6 +162,6 @@
     .game-result {
         width: 70%;
         left: 5%;
-        top: 160%;
+        top: 1300px;
     }
 }
