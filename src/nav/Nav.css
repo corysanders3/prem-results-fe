@@ -1,0 +1,56 @@
+.prem-logo {
+    width: 200px;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2D0A3D;
+    height: 95px;
+}
+
+.nav-link {
+    font-size: larger;
+    color: #2D0A3D;
+    text-decoration: none;
+    border: 3px solid white;
+    padding: 5px 10px 5px 10px;
+    border-radius: 10px;
+    background-color: white;
+    font-weight: 500;
+    margin-right: 40px;
+}
+
+.nav-link:hover {
+    cursor: pointer;
+    background-color: lightgray;
+}
+
+.active {
+    background-color: lightgray;
+}
+
+@media screen and (max-width: 540px) {
+    .nav-link {
+        margin-right: 20px;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    .nav-link {
+        margin-right: 5px;
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .nav-links-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .nav-link:nth-child(1) {
+        margin-bottom: 10px;
+        grid-column: span 2;
+        text-align: center;
+    }
+}

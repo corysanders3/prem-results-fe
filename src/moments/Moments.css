@@ -1,0 +1,73 @@
+.story-main {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.story-img {
+    width: 80%;
+}
+
+.img-container {
+    text-align: center;
+}
+
+.story-text {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.story-name {
+    font-size: larger;
+}
+
+.story {
+    line-height: 2;
+    text-align: center;
+}
+
+.video-a {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    margin-bottom: 40px;
+}
+
+.video-btn {
+    font-size: larger;
+    padding: 10px 40px 10px 40px;
+    font-weight: 600;
+    border-radius: 10px;
+    background-color: white;
+    color: #2D0A3D;
+    border: 3px solid #2D0A3D;
+}
+
+.video-btn:hover {
+    cursor: pointer;
+    background-color: lightgray;
+}
+
+.game-blurb {
+    padding-top: 50px;
+    border-top: 15px dotted #2D0A3D;
+    font-size: larger;
+    margin-bottom: 50px;
+}
+
+.game-footer:hover {
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1023px) {
+    .story-main {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .story-main {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}

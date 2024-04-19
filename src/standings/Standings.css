@@ -1,0 +1,108 @@
+.league-table > :nth-child(2n+3) {
+    background-color: #eee;
+    
+}
+
+.league-table, .year {
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.year {
+    font-size: 25px;
+}
+
+.rules {
+    line-height: 1.5;
+}
+
+.table-row {
+    display: grid;
+    grid-template-columns: 5% 15% 5% 5% 5% 5% 5% 5% 5% 10% 25%;
+    grid-template-rows: 70px;
+    border: 1px solid #2D0A3D;
+    padding-left: 10px;
+    column-gap: 1%;
+}
+
+.key {
+    margin: 20px 100px 0px 100px;
+}
+
+.not-found {
+    margin-left: 100px;
+    margin-right: 100px;
+    font-size: large;
+}
+
+.back-home-btn {
+    font-size: large;
+    text-decoration: none;
+    padding: 0px 20px 0px 20px;
+    font-weight: 600;
+    border-radius: 10px;
+    background-color: white;
+    color: #2D0A3D;
+    border: 3px solid #2D0A3D;
+}
+
+.back-home-btn:hover {
+    cursor: pointer;
+    background-color: lightgray;
+}
+
+.year-key {
+    margin-bottom: 50px;
+}
+
+@media screen and (max-width: 1023px) {
+    .league-table, .year, .key {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .league-table, .year, .key {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .notes {
+        display: none;
+    }
+
+    .table-row {
+        grid-template-columns: 10% 21% 7% 7% 7% 7% 7% 7% 7% 15%;
+
+    }
+
+    .not-found {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .notes, .clear {
+        display: none;
+    }
+
+    .table-row {
+        grid-template-columns: 14% 25% 9% 9% 9% 9% 20%;
+
+    }
+}
+
+@media screen and (max-width: 460px) {
+    .notes, .clear, .clear-two {
+        display: none;
+    }
+
+    .table-row {
+        grid-template-columns: 20% 50% 30%;
+
+    }
+}
