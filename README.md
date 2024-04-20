@@ -1,11 +1,11 @@
-# <p align="center">[⚽️ Premier Tally 🏟️](https://prem-results-b7rv9ywz8-corys-projects-8e9f64e4.vercel.app/)</p>
+# <p align="center">[⚽️ Premier Tally 🏟️](https://prem-results-fe.vercel.app/)</p>
 <p align='center' >👆<b>Click the heading to visit the deploy link</b>👆</p>
 
 <p align="center">Web application that is meant to provide knowledge on the English Premier League that includes historic league tables, top moments in the league, and features a game to learn about top goal scorers. It is designed with multiple screen sizes in mind, with responsiveness to accommodate all.</p>
 
 ## Preview:
 <div align="center">
-  <img src="prem-demo.gif" alt="app demo">
+  <img src="premier-tally.gif" alt="app demo">
 </div>
 </br>
 <p align="center">Technologies Used</p>
@@ -20,7 +20,7 @@
 </div>
 
 ## Installation Instructions:
-- Visit the deployed [link](https://prem-results-b7rv9ywz8-corys-projects-8e9f64e4.vercel.app/)
+- Visit the deployed [link](https://prem-results-fe.vercel.app/)
 - OR run the following on command line to clone the repo and run the app locally:
     ```
     git clone git@github.com:corysanders3/prem-results-fe.git
