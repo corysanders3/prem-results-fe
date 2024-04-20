@@ -13,6 +13,7 @@
     font-size: large;
     border-radius: 10px;
     margin-right: 20px;
+    width: 150px;
 }
 
 .error-form {
@@ -57,14 +58,14 @@
     }
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 560px) {
     .search-section, .error-form {
         margin-left: 20px;
         margin-right: 20px;
     }
 }
 
-@media screen and (max-width: 490px) {
+@media screen and (max-width: 500px) {
     .form-container {
         display: grid;
         grid-template-columns: 35px 165px;
