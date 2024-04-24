@@ -34,6 +34,9 @@
 - Click `E2E Testing`, then `Start E2E Testing` in desired browser
 - Select `home_spec`, `about_spec`, `standings_spec`, or `game_spec` to run desired tests
 
+## Backend
+- Here is a link to the [backend repo](https://github.com/corysanders3/prem-results-api). The server is already deployed.
+
 ## Context:
 - ~40 hours to complete functionality, test suite, and responsiveness
 - Goals
