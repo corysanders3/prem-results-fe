@@ -1,5 +1,5 @@
 function getPremData(endpoint: string) {
-    return fetch(`https://prem-server-80f72a145ae6.herokuapp.com/api/v1/${endpoint}`)
+    return fetch(`https://prem-results-api.vercel.app/api/v1/${endpoint}`)
         .then(res => {
             if(!res.ok) {
                 throw new Error('Unable to get football data right now.')
