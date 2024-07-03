@@ -32,7 +32,7 @@ const bestMoments = [
         year: 2006,
         story: `Alan Shearer is one of the greatest players to ever play in the Premier League. His debut in the Premier League came in 1992 with Blackburn Rovers. It did not take long for him to start bagging goals. His first season, he had 16 goals, but followed that up with 3 seasons of 30+ goals. It didn’t take long for clubs to notice his skills. In 1996, Newcastle United paid £15 million to sign Shearer, which at the time was a world transfer record breaking fee. Shearer’s career at Newcastle continued to flourish, as he became the first player in Premier League history to score 100+ goals for 2 different clubs. Alan Shearer finished with 1 Premier League title, and still remains as the leagues top goal scorer, sitting at 260. Click the link below to watch highlights of some of his best goals.`,
         link: 'https://www.youtube.com/watch?v=fujQiqUxMwU',
-        image: 'https://www.nufc.co.uk/media/28059/alan-shearer-celebrates.jpg?anchor=center&mode=crop&width=900&height=506&quality=75',
+        image: 'https://assets.goal.com/images/v3/bltc2f85b8a4c635243/abc8c15417c886487ee641edb0df4b8fae6371cb.jpg',
     },
 ];
 
